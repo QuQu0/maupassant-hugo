@@ -2,7 +2,7 @@
     <div>
         &copy; {{ now.Format "2006" }} <a href="{{ .Site.BaseURL | absURL }}">{{ .Site.Title }} By {{ .Site.Author.name }}</a>
         {{ if .Site.Params.beian }}
-        | <a rel="nofollow" target="_blank" href="http://www.beian.miit.gov.cn/">{{.Site.Params.beian}}</a>
+        | <a rel="nofollow" target="_blank" href="http://beian.miit.gov.cn/">{{.Site.Params.beian}}</a>
         {{ end }}
     </div>
     <br />
@@ -121,6 +121,10 @@
             };
     </script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+    
+    {{- if .Site.Params.fancybox -}}
+        <script src="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    {{- end -}}
 {{ end }}
 
 <a id="rocket" href="#top"></a>
